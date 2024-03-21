@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "5.37.0"
+      version = "~>5"
     }
   }
 }
@@ -158,7 +158,7 @@ resource "aws_instance" "webserver2" {
   user_data              = "${file("apache.sh")}"
 
   tags = {
-    Name = "Web Server"
+    Name = "Web Server-2"
   }
 }
 
